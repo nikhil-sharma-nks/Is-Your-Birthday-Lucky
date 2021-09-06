@@ -5,32 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Is Your Birthday Lucky</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <div class="main-title">Is Your Birthday Lucky?</div>
-      <div class="description">
-        When your lucky number is divisible by sum of digits of your Date Of
-        Birth, it is considered to be lucky!
+    <div class="container">
+      <header>
+        <div class="main-title">Is Your Birthday Lucky?</div>
+        <div class="description">
+          When your lucky number is divisible by sum of digits of your Date Of
+          Birth, it is considered to be lucky!
+        </div>
+        <hr />
+      </header>
+      <section class="input-section">
+        <label for="date-of-birth">Date Of Birth:</label>
+        <input type="date" id="date-of-birth" />
+
+        <label for="lucky-number">Lucky Number:</label>
+
+        <input
+          type="number"
+          id="lucky-number"
+          placeholder="Enter Your Lucky Number Here"
+        />
+
+        <button id="check-number">Check Number</button>
+      </section>
+      <div class="result"></div>
+      <div class="error"></div>
+    </div>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p class="footer-text">Made with ❤ by Nikhil <br /></p>
+
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/nikhil-sharma-nks/"
+            target="_blank"
+            ><i class="fab fa-linkedin fa-3x"></i
+          ></a>
+          <a href="https://github.com/nikhil-sharma-nks" target="_blank"
+            ><i class="fab fa-github fa-3x"></i
+          ></a>
+          <a href="https://twitter.com/wannabe_nikhil" target="_blank"
+            ><i class="fab fa-twitter fa-3x"></i
+          ></a>
+          <a href="https://www.facebook.com/nikhilshawarma/" target="_blank">
+            <i class="fab fa-facebook fa-3x"></i
+          ></a>
+          <a href="https://www.instagram.com/nikhil.shawarma/" target="_blank"
+            ><i class="fab fa-instagram fa-3x"></i
+          ></a>
+        </div>
       </div>
-    </header>
-    <section class="input-section">
-      <label for="date-of-birth">Date Of Birth</label>
-      <input type="date" id="date-of-birth" />
-
-      <label for="lucky-number">Lucky Number</label>
-
-      <input
-        type="number"
-        id="lucky-number"
-        placeholder="Enter Your Lucky Number Here"
-      />
-
-      <button id="check-number">Check Number</button>
-    </section>
-    <div class="result"></div>
-    <div class="error"></div>
+    </footer>
   </body>
   <script src="./app.js"></script>
 </html>

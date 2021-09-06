@@ -15,18 +15,24 @@ function returnSum(dob) {
 }
 
 checkNumberBtn.addEventListener("click", function checkNumberClickHandler() {
+  resultMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
   let dob = dateOfBirth.value;
   let number_lucky = luckyNumber.value;
   if (dob && number_lucky) {
     const sum = returnSum(dob);
     console.log("Sum ", sum);
+
+    resultMsg.style.display = "block";
     if (sum % number_lucky === 0) {
       console.log("Lucky Number");
-      resultMsg.innerText = "Lucky Number";
+      resultMsg.innerText = `${number_lucky} is your Lucky Number`;
     } else {
-      resultMsg.innerText = "NOT A Lucky Number";
+      resultMsg.innerText = `${number_lucky} is NOT your Lucky Number`;
     }
   } else {
-    errorMsg.innerText = "PLEASE ENTER BOTH THE VALUES";
+    errorMsg.style.display = "block";
+    errorMsg.innerText = "ERROR: PLEASE ENTER BOTH THE VALUES";
   }
 });
