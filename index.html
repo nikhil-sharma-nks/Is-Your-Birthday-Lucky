@@ -8,7 +8,29 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Is Your Birthday Lucky</h1>
-    <script src="./app.js" />
+    <header>
+      <div class="main-title">Is Your Birthday Lucky?</div>
+      <div class="description">
+        When your lucky number is divisible by sum of digits of your Date Of
+        Birth, it is considered to be lucky!
+      </div>
+    </header>
+    <section class="input-section">
+      <label for="date-of-birth">Date Of Birth</label>
+      <input type="date" id="date-of-birth" />
+
+      <label for="lucky-number">Lucky Number</label>
+
+      <input
+        type="number"
+        id="lucky-number"
+        placeholder="Enter Your Lucky Number Here"
+      />
+
+      <button id="check-number">Check Number</button>
+    </section>
+    <div class="result"></div>
+    <div class="error"></div>
   </body>
+  <script src="./app.js"></script>
 </html>
