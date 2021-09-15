@@ -21,15 +21,20 @@ checkNumberBtn.addEventListener("click", function checkNumberClickHandler() {
   let dob = dateOfBirth.value;
   let number_lucky = luckyNumber.value;
   if (dob && number_lucky) {
-    const sum = returnSum(dob);
-    console.log("Sum ", sum);
+    if (number_lucky > 0) {
+      const sum = returnSum(dob);
+      console.log("Sum ", sum);
 
-    resultMsg.style.display = "block";
-    if (sum % number_lucky === 0) {
-      console.log("Lucky Number");
-      resultMsg.innerText = `${number_lucky} is your Lucky Number`;
+      resultMsg.style.display = "block";
+      if (sum % number_lucky === 0) {
+        console.log("Lucky Number");
+        resultMsg.innerText = `${number_lucky} is your Lucky Number`;
+      } else {
+        resultMsg.innerText = `${number_lucky} is NOT your Lucky Number`;
+      }
     } else {
-      resultMsg.innerText = `${number_lucky} is NOT your Lucky Number`;
+      errorMsg.style.display = "block";
+      errorMsg.innerText = "ERROR: PLEASE ENTER NUMBER GREATER THAN 0";
     }
   } else {
     errorMsg.style.display = "block";

@@ -49,7 +49,7 @@ header .description {
 
 .input-section input {
   width: 50%;
-  padding: 5px;
+  padding: 15px;
   margin: 10px auto 20px;
   text-align: center;
   border-radius: 5px;
@@ -110,4 +110,70 @@ header .description {
 .social .fab:hover {
   background-color: var(--primary-color);
   cursor: pointer;
+}
+
+@media (max-width: 540px) {
+  body {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.3rem;
+  }
+
+  .container {
+    height: 100%;
+    width: 90%;
+  }
+
+  header .main-title {
+    font-size: 2rem;
+  }
+
+  header .description {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .input-section {
+    /* width: 80%; */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-section input {
+    width: 80%;
+    margin: 10px auto 40px;
+  }
+
+  #check-number {
+    width: 80%;
+    padding: 15px 5px;
+  }
+
+  .main-footer {
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .social .fab {
+    border-radius: 50%;
+    color: rgb(10, 10, 10);
+    /* color: var(--primary-color); */
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .social .fab:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
 }
